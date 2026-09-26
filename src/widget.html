@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Spotify Widget</title>
+<link rel="stylesheet" href="widget.css" />
+</head>
+<body>
+  <div id="card" class="card">
+    <div id="move-badge" class="move-badge" hidden>Ziehen zum Verschieben · Ecke zum Skalieren</div>
+
+    <div id="playing-view" class="playing-view" hidden>
+      <div class="row">
+        <img id="cover" class="cover" alt="Album-Cover" />
+        <div class="meta">
+          <div id="track" class="track"></div>
+          <div id="artist" class="artist"></div>
+        </div>
+      </div>
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <div class="controls">
+        <button id="prev-btn" class="ctrl-btn">⏮</button>
+        <button id="playpause-btn" class="ctrl-btn ctrl-btn-main">▶</button>
+        <button id="next-btn" class="ctrl-btn">⏭</button>
+      </div>
+    </div>
+
+    <div id="empty-view" class="empty-view">
+      <div class="empty-icon">♪</div>
+      <div id="empty-text" class="empty-text">Nicht verbunden</div>
+      <div class="empty-hint">Rechtsklick → Einstellungen</div>
+    </div>
+
+    <div class="resize-handle" id="resize-handle"></div>
+  </div>
+  <script src="widget.js"></script>
+</body>
+</html>

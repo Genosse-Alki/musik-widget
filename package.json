@@ -1,0 +1,30 @@
+{
+  "name": "spotify-widget",
+  "version": "1.0.0",
+  "description": "Ein schlankes Desktop-Widget für Windows, das den aktuellen Spotify-Song mit Cover und Steuerung anzeigt.",
+  "main": "main.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.spotifywidget.app",
+    "productName": "Spotify Widget",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "spotify.js",
+      "src/**/*",
+      "assets/**/*"
+    ]
+  }
+}

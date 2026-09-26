@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Einstellungen</title>
+<link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Spotify Widget</h1>
+
+    <section class="section">
+      <h2>Spotify verbinden</h2>
+      <p class="muted">
+        Erstelle kostenlos eine eigene App unter
+        <span class="code">developer.spotify.com/dashboard</span>, trage als Redirect-URI genau
+        <span class="code">http://127.0.0.1:8899/callback</span> ein und kopiere die Client-ID hierher.
+      </p>
+      <label class="field-label">Client-ID</label>
+      <input id="client-id-input" type="text" placeholder="z. B. 8a3f9c…" />
+      <div class="btn-row">
+        <button id="save-client-id-btn" class="ghost-btn">Client-ID speichern</button>
+        <button id="connect-btn" class="primary-btn">Mit Spotify verbinden</button>
+      </div>
+      <div id="status-line" class="status-line">Status: wird geprüft…</div>
+      <button id="disconnect-btn" class="ghost-btn danger" hidden>Trennen</button>
+    </section>
+
+    <section class="section">
+      <h2>Erscheinungsbild</h2>
+      <label class="field-label">Deckkraft (<span id="opacity-value">62</span>%)</label>
+      <input id="opacity-input" type="range" min="10" max="100" />
+      <label class="field-label">Akzentfarbe</label>
+      <input id="accent-input" type="color" />
+      <label class="field-label">Eckenradius (<span id="radius-value">20</span>px)</label>
+      <input id="radius-input" type="range" min="0" max="40" />
+      <label class="field-label">Breite × Höhe</label>
+      <div class="row-2">
+        <input id="width-input" type="number" min="220" max="600" />
+        <input id="height-input" type="number" min="110" max="400" />
+      </div>
+    </section>
+
+    <p class="muted small">Änderungen wirken sofort auf das Widget. Rechtsklick auf das Widget öffnet dieses Fenster jederzeit wieder.</p>
+  </div>
+  <script src="settings.js"></script>
+</body>
+</html>
