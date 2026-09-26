@@ -13,28 +13,8 @@ npm start
 Beim allerersten Start öffnet sich automatisch das Einstellungsfenster, weil noch keine
 Spotify-Verbindung besteht.
 
-## 2. Mit Spotify verbinden (einmalig)
 
-Spotify verlangt für jede App eine eigene, kostenlose Registrierung:
-
-1. Auf [developer.spotify.com/dashboard](https://developer.spotify.com/dashboard) mit dem
-   eigenen Spotify-Account einloggen und **„Create app"** klicken.
-2. Beliebigen Namen/Beschreibung eintragen.
-3. Bei **Redirect URIs** genau folgendes eintragen (wichtig, muss exakt passen):
-   ```
-   http://127.0.0.1:8899/callback
-   ```
-4. Unter **APIs used** „Web API" auswählen, speichern.
-5. Im App-Dashboard die **Client ID** kopieren.
-6. Im Widget-Einstellungsfenster die Client-ID einfügen → „Client-ID speichern" →
-   „Mit Spotify verbinden". Es öffnet sich der Browser zum Spotify-Login; danach ist die
-   Verbindung aktiv (kein Client-Secret nötig, die App nutzt den sichereren PKCE-Flow).
-
-**Hinweis:** Play/Pause/Skip funktionieren nur mit **Spotify Premium** und wenn Spotify
-gerade aktiv auf irgendeinem Gerät läuft (App, Web Player, Lautsprecher …) – das ist eine
-Einschränkung der Spotify-API, keine der App.
-
-## 3. Widget bedienen
+## 2. Widget bedienen
 
 - **Rechtsklick auf das Widget** → Einstellungen, Verschieben/Skalieren, Sperren
 - **„Widget verschieben/skalieren"**: solange aktiv, lässt sich das Widget frei ziehen und
